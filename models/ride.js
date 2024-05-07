@@ -6,6 +6,7 @@ const RideSchema = new Schema({
   description: String,
   location: String,
   inches: Number, // height requirement in inches
+  image: String,
 });
 
 module.exports = mongoose.model("Ride", RideSchema);
