@@ -50,6 +50,6 @@ module.exports = {
   index,
   show,
   create,
-  update,
   delete: destroy,
+  update,
 };
