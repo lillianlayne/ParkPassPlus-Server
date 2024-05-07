@@ -12,6 +12,6 @@ router.get("/:id", rideCtrl.show);
 //ride delete route
 router.delete("/:id", rideCtrl.delete);
 //ride update route
-// router.put("/:id", rideCtrl.update);
+router.put("/:id", rideCtrl.update);
 
 module.exports = router;
