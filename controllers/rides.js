@@ -36,17 +36,20 @@ const destroy = async (req, res, next) => {
 };
 
 //same as other two coded out
-// const update = async (req, res, next) => {
-//   try {
-//     res.json(
-//       await Ride.findByIdAndUpdate(req.params.id, req.body, { new: true })
-//     );
-//   } catch (error) {
-//     res.status(400).json(error);
-//   }
-// };
+const update = async (req, res, next) => {
+  try {
+    res.json(
+      await Ride.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    );
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
 
 module.exports = {
   index,
   show,
+  create,
+  update,
+  delete: destroy,
 };
