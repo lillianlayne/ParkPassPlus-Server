@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const rideCtrl = require("../controllers/rides");
+
 //rides index route
 router.get("/", rideCtrl.index);
 //ride create route
