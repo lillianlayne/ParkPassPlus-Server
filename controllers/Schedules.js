@@ -1,10 +1,9 @@
 const express = require("express");
-const { Ride } = require("../models");
+const { Schedule } = require("../models/");
 
 const index = async (req, res, next) => {
   try {
-    //get all rides
-    res.json(await Ride.find({}));
+    res.json(await Schedule.find({}));
   } catch (error) {
     res.status(400).json(error);
   }
@@ -12,7 +11,7 @@ const index = async (req, res, next) => {
 
 const show = async (req, res, next) => {
   try {
-    res.json(await Ride.findById(req.params.id));
+    res.json(await Schedule.findById(req.params.id));
   } catch (error) {
     res.status(400).json(error);
   }
@@ -20,26 +19,24 @@ const show = async (req, res, next) => {
 
 const create = async (req, res, next) => {
   try {
-    res.json(await Ride.create(req.body));
+    res.json(await Schedule.create(req.body));
   } catch (error) {
     res.status(400).json(error);
   }
 };
 
-//same as create
 const destroy = async (req, res, next) => {
   try {
-    res.json(await Ride.findByIdAndDelete(req.params.id));
+    res.json(await Schedule.findByIdAndDelete(req.params.id));
   } catch (errord) {
     res.status(400).json(error);
   }
 };
 
-//same as other two coded out
 const update = async (req, res, next) => {
   try {
     res.json(
-      await Ride.findByIdAndUpdate(req.params.id, req.body, { new: true })
+      await Schedule.findByIdAndUpdate(req.params.id, req.body, { new: true })
     );
   } catch (error) {
     res.status(400).json(error);
