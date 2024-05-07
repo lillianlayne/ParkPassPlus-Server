@@ -6,11 +6,11 @@ const rideCtrl = require("../controllers/rides");
 //rides index route
 router.get("/", rideCtrl.index);
 //ride create route
-// router.post("/", rideCtrl.create);
+router.post("/", rideCtrl.create);
 //specific ride read route
 router.get("/:id", rideCtrl.show);
 //ride delete route
-// router.delete("/:id", rideCtrl.delete);
+router.delete("/:id", rideCtrl.delete);
 //ride update route
 // router.put("/:id", rideCtrl.update);
 

@@ -18,23 +18,22 @@ const show = async (req, res, next) => {
   }
 };
 
-// Don't think we're creating new rides but code below if we wanted to
-// const create = async (req, res, next) => {
-//   try {
-//     res.json(await Ride.create(req.body));
-//   } catch (error) {
-//     res.status(400).json(error);
-//   }
-// };
+const create = async (req, res, next) => {
+  try {
+    res.json(await Ride.create(req.body));
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
 
 //same as create
-// const destroy = async (req, res, next) => {
-//   try {
-//     res.json(await Ride.findByIdAndDelete(req.params.id));
-//   } catch (errord) {
-//     res.status(400).json(error);
-//   }
-// };
+const destroy = async (req, res, next) => {
+  try {
+    res.json(await Ride.findByIdAndDelete(req.params.id));
+  } catch (errord) {
+    res.status(400).json(error);
+  }
+};
 
 //same as other two coded out
 // const update = async (req, res, next) => {
