@@ -4,6 +4,8 @@ const Schema = mongoose.Schema;
 const RideSchema = new Schema({
   name: String,
   description: String,
+  location: String,
   inches: Number, // height requirement in inches
-  weight: Number, // weight requirement in pounds
 });
+
+module.exports = mongoose.model("Ride", RideSchema);
