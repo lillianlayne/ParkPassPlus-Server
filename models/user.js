@@ -7,6 +7,7 @@ const UserSchema = new Schema({
   password: String,
   ticketType: String,
   park: String,
+  rides: [String]
 });
 
 module.exports = mongoose.model("User", UserSchema);
