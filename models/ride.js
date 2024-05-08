@@ -9,4 +9,5 @@ const RideSchema = new Schema({
   image: String,
 });
 
+
 module.exports = mongoose.model("Ride", RideSchema);
